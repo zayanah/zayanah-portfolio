@@ -200,6 +200,7 @@
     50% { transform: translateY(4px); }
   }
 
+  
   /* ── SECTIONS ── */
   section {
     padding: 5rem 3rem;
@@ -587,6 +588,75 @@
     transform: translateY(0);
   }
 
+
+  /* DESIGN PORTFOLIO */
+
+.design-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:2rem;
+}
+
+.design-card{
+  border:1px solid var(--line);
+  background:var(--bg2);
+  overflow:hidden;
+  transition:all .3s ease;
+}
+
+.design-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-4px);
+}
+
+.design-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.design-content{
+  padding:1.5rem;
+}
+
+.design-title{
+  font-family:var(--serif);
+  font-size:1.4rem;
+  margin-bottom:.75rem;
+}
+
+.design-desc{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+  margin-bottom:1rem;
+}
+
+.design-btn{
+  display:inline-block;
+  text-decoration:none;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  padding:8px 14px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  transition:.3s;
+}
+
+.design-btn:hover{
+  background:var(--accent);
+  color:black;
+}
+
+.design-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
@@ -611,6 +681,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#Designs">Designs</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -645,9 +716,11 @@
   <div class="hero-bottom">
     <p class="hero-desc">
       Zayanah Khan
-      MCA Student | Aspiring Software Tester & Python Developer
+      MCA Student | Software Tester | Python Developer | UI/UX Designer
       Open to Internships & Entry-Level Opportunities
     </p>
+
+    
     <div class="hero-stats">
       <div>
         <span class="stat-val">MCA</span>
@@ -676,7 +749,7 @@
   <div class="about-grid fade-in">
   <div class="about-text">
     <p>
-      I am pursuing a <strong>Master of Computer Applications (MCA)</strong> at Mount Carmel College, Bengaluru. My areas of interest include Software Testing, Web Development, Python Programming, and Machine Learning.
+      I am pursuing <strong>Master of Computer Applications (MCA)</strong> at Mount Carmel College, Bengaluru. My areas of interest include Software Testing, Web Development, Python Programming, and Machine Learning.
     </p>
 
     <p>
@@ -705,6 +778,20 @@
           <span class="skill-tag">CSS</span>
         </div>
       </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">UI/UX Design</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Mobile UI Design</span>
+          <span class="skill-tag">Web UI Design</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+
+
       <div class="skill-group">
         <div class="skill-group-title">Backend</div>
         <div class="skill-tags">
@@ -806,10 +893,96 @@
   </div>
 </section>
 
+<!-- DESIGN PORTFOLIO -->
+
+<section id="Designs">
+
+  <div class="section-header fade-in">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Design Portfolio</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="design-grid">
+
+    <!-- Ecommerce -->
+
+    <div class="design-card fade-in">
+
+      <img src="images/e-commerce application.png"
+     alt="Fashion Heights App"
+     class="design-image">
+
+      <div class="design-content">
+
+        <h3 class="design-title">
+          Fashion Heights E-Commerce App
+        </h3>
+
+        <p class="design-desc">
+          Complete e-commerce mobile application prototype designed in Figma featuring onboarding, authentication, shopping experience, cart management and user profile screens.
+        </p>
+
+
+      </div>
+
+    </div>
+
+    <!-- Instagram -->
+
+    <div class="design-card fade-in">
+
+      <img src="images/instagram-redesign.png"
+     alt="Instagram Redesign"
+     class="design-image">
+
+      <div class="design-content">
+
+        <h3 class="design-title">
+          Instagram Redesign
+        </h3>
+
+        <p class="design-desc">
+          Redesigned Instagram Home, Search and Profile screens using a modern dark theme and improved visual hierarchy.
+        </p>
+
+
+      </div>
+
+    </div>
+
+    <!-- Auth Flow -->
+
+    <div class="design-card fade-in">
+
+      <img src="images/auth-flow.png"
+     alt="Authentication Flow"
+     class="design-image">
+
+      <div class="design-content">
+
+        <h3 class="design-title">
+          Authentication Flow Design
+        </h3>
+
+        <p class="design-desc">
+          User onboarding, login and registration flow created in Figma with a focus on simplicity and usability.
+        </p>
+
+     
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header fade-in">
-    <span class="section-num">03</span>
+    <span class="section-num">04</span>
     <h2 class="section-title">Education & Internship</h2>
     <div class="section-line"></div>
   </div>
