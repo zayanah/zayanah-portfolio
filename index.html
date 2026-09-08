@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Replace the LinkedIn href and resume href placeholders before deployment. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zayanah Khan — Software Dev Trainee</title>
+<title>Zayanah Khan — Frontend Developer & UI/UX Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
 <style>
@@ -293,6 +294,53 @@
     color: var(--text);
     border-color: var(--accent);
   }
+
+  /* ── PROJECT VISUALS ── */
+  .project-visual {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 260px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--bg3);
+    position: relative;
+  }
+
+  .project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform .45s ease;
+  }
+
+  .project-item:hover .project-visual img { transform: scale(1.015); }
+
+  .project-visual::after {
+    content: 'LIVE WEBSITE';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 8px;
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(14,14,14,.72);
+    color: var(--accent);
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: .75rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .project-link:hover { text-decoration: underline; }
 
   /* ── PROJECTS ── */
   .projects-list {
@@ -667,6 +715,7 @@
     section { padding: 3rem 1.5rem; }
     .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
     .project-item { grid-template-columns: 60px 1fr; }
+    .project-visual { grid-column: 1 / -1; height: 190px; }
     .project-tech { display: none; }
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
     footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -704,10 +753,10 @@
 
   </div>
 
-  <div class="avatar-label">MCA Student • Open to Work</div>
+  <div class="avatar-label">MCA Student • Open to Entry-Level Opportunities</div>
 </div>
   <div class="hero-tag">
-  MCA Student • Open to Internships & Entry-Level Opportunities
+  MCA Student • Open to Entry-Level Opportunities
 </div>
 
 <h1 class="hero-name">
@@ -715,9 +764,8 @@
 </h1>  
   <div class="hero-bottom">
     <p class="hero-desc">
-      Zayanah Khan
-      MCA Student | Software Tester | Python Developer | UI/UX Designer
-      Open to Internships & Entry-Level Opportunities
+      MCA Student | Frontend Developer | Python Developer | UI/UX Designer | Software Tester
+      <br><br>Open to Entry-Level Opportunities
     </p>
 
     
@@ -749,15 +797,15 @@
   <div class="about-grid fade-in">
   <div class="about-text">
     <p>
-      I am pursuing <strong>Master of Computer Applications (MCA)</strong> at Mount Carmel College, Bengaluru. My areas of interest include Software Testing, Web Development, Python Programming, and Machine Learning.
+      I am pursuing <strong>Master of Computer Applications (MCA)</strong> at Mount Carmel College, Bengaluru, with a focus on frontend development, web experiences, and UI/UX design.
     </p>
 
     <p>
-      I have worked on projects such as Plant Disease Detection, Music Streaming Web Application, Cartoonify Image Application, and Online Bookstore Management System, which have strengthened my problem-solving and development skills.
+      I have worked on <strong>interactive B2B websites and product interfaces</strong> including Digitomics.ai and Dolfyn.ai, using Next.js, React, TypeScript, and modern design systems.
     </p>
 
     <p>
-      I am actively looking for opportunities to begin my professional journey in the IT industry. With a strong foundation in programming, testing, and database management, I am eager to contribute, learn, and grow in a dynamic work environment.
+      I enjoy combining <strong>design and development</strong> to build responsive, polished digital experiences and continue to grow across frontend development, software testing, and web technologies.
     </p>
   </div>
     <div class="skills-grid">
@@ -772,10 +820,12 @@
       <div class="skill-group">
         <div class="skill-group-title">Frontend</div>
         <div class="skill-tags">
-          <span class="skill-tag">React</span>
           <span class="skill-tag">HTML</span>
-          <span class="skill-tag">JavaScript</span>
           <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Next.js</span>
         </div>
       </div>
 
@@ -797,6 +847,8 @@
         <div class="skill-tags">
           <span class="skill-tag">Django</span>
           <span class="skill-tag">Python</span>
+          <span class="skill-tag">NoSQL</span>
+          <span class="skill-tag">SQL</span>
         </div>
       </div>
       <div class="skill-group">
@@ -821,30 +873,48 @@
 
   <div class="projects-list">
 
-    <div class="project-item fade-in">
-      <div class="project-year">2025</div>
+    <article class="project-item fade-in">
+      <div class="project-visual"><img src="https://image.thum.io/get/width/1400/crop/800/noanimate/https://digitomics.ai/" alt="Digitomics.ai website preview" loading="lazy"></div>
+      <div class="project-year">2026</div>
       <div>
-        <div class="project-title">Music Streaming Website</div>
+        <div class="project-title">Digitomics.ai</div>
         <div class="project-desc">
-          Designed and developed a full-stack music streaming web application with user authentication, music management, and database integration. Built an interactive interface to provide a seamless music listening experience.
+          Built and refined frontend experiences for a B2B Technology ROI and FinOps platform, working across dashboards, data-source flows, Action Center, recommendations, Cost Explorer and AI-driven product experiences.
         </div>
+        <a class="project-link" href="https://digitomics.ai/" target="_blank" rel="noopener">View live ↗</a>
       </div>
       <div class="project-tech">
-        <span class="tech-badge">Python</span>
-        <span class="tech-badge">Django</span>
-        <span class="tech-badge">HTML</span>
-        <span class="tech-badge">CSS</span>
-        <span class="tech-badge">JavaScript</span>
-        <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">UI/UX</span>
       </div>
-    </div>
+    </article>
 
-    <div class="project-item fade-in">
+    <article class="project-item fade-in">
+      <div class="project-visual"><img src="https://image.thum.io/get/width/1400/crop/800/noanimate/https://dolfyn.ai/" alt="Dolfyn.ai website preview" loading="lazy"></div>
+      <div class="project-year">2026</div>
+      <div>
+        <div class="project-title">Dolfyn.ai</div>
+        <div class="project-desc">
+          Designed and developed the Dolfyn.ai website with responsive layouts, reusable sections, clear AI product storytelling, feature presentation, conversion-focused CTAs and a consistent visual system.
+        </div>
+        <a class="project-link" href="https://dolfynai.com/" target="_blank" rel="noopener">View live ↗</a>
+      </div>
+      <div class="project-tech">
+        <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Responsive UI</span>
+      </div>
+    </article>
+
+    <article class="project-item fade-in">
       <div class="project-year">2025</div>
       <div>
         <div class="project-title">Plant Disease Detection using Deep Learning</div>
         <div class="project-desc">
-          Developed a deep learning model to identify plant diseases from leaf images. The system helps farmers detect diseases early and improve crop health through image-based classification.
+          Developed an image-classification system to identify plant diseases from leaf images and support early detection.
         </div>
       </div>
       <div class="project-tech">
@@ -853,42 +923,24 @@
         <span class="tech-badge">OpenCV</span>
         <span class="tech-badge">CNN</span>
       </div>
-    </div>
+    </article>
 
-
-    <div class="project-item fade-in">
+    <article class="project-item fade-in">
       <div class="project-year">2025</div>
       <div>
-        <div class="project-title">Virtual Classroom System</div>
+        <div class="project-title">Music Streaming Website</div>
         <div class="project-desc">
-          Built a cloud-based virtual classroom platform to support online teaching and learning. Designed for remote accessibility and scalability using cloud computing concepts.
+          Built a full-stack music streaming website with authentication, music management, database integration and an interactive responsive interface.
         </div>
       </div>
       <div class="project-tech">
         <span class="tech-badge">Python</span>
-        <span class="tech-badge">AWS Basics</span>
-        <span class="tech-badge">HTML</span>
-        <span class="tech-badge">CSS</span>
+        <span class="tech-badge">Django</span>
+        <span class="tech-badge">JavaScript</span>
         <span class="tech-badge">MySQL</span>
       </div>
-    </div>
+    </article>
 
-        <div class="project-item fade-in">
-      <div class="project-year">2024</div>
-      <div>
-        <div class="project-title">Online Book Store Management System</div>
-        <div class="project-desc">
-          Developed an online bookstore application for searching, purchasing, and managing books. Implemented database management concepts for inventory control, transaction handling, and data consistency.
-        </div>
-      </div>
-      <div class="project-tech">
-        <span class="tech-badge">Java</span>
-        <span class="tech-badge">MySQL</span>
-        <span class="tech-badge">HTML</span>
-        <span class="tech-badge">CSS</span>
-        <span class="tech-badge">ADBMS</span>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -909,7 +961,7 @@
 
     <div class="design-card fade-in">
 
-      <img src="e-commerce application.png"
+      <img src="images/e-commerce application.png"
      alt="Fashion Heights App"
      class="design-image">
 
@@ -932,7 +984,7 @@
 
     <div class="design-card fade-in">
 
-      <img src="instagram-redesign.png"
+      <img src="images/instagram-redesign.png"
      alt="Instagram Redesign"
      class="design-image">
 
@@ -955,7 +1007,7 @@
 
     <div class="design-card fade-in">
 
-      <img src="auth-flow.png"
+      <img src="images/auth-flow.png"
      alt="Authentication Flow"
      class="design-image">
 
@@ -991,15 +1043,41 @@
 
     <div class="exp-item fade-in">
       <div class="exp-date">
+        Jun 2026 — Present<br>
+        <span style="color:var(--accent);font-size:11px;">Internship</span>
+      </div>
+      <div>
+        <div class="exp-company">Digitomics | Dolfyn AI</div>
+        <div class="exp-role">Frontend Developer & UI/UX Design Intern</div>
+        <div class="exp-desc">
+          Worked primarily on frontend development and UI/UX for interactive B2B websites and product interfaces, using modern web technologies and responsive design systems.
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-date">
+        May 2024 — Jun 2024<br>
+        <span style="color:var(--accent);font-size:11px;">Internship</span>
+      </div>
+      <div>
+        <div class="exp-company">Take It Smart</div>
+        <div class="exp-role">Software Developer — Full Stack</div>
+        <div class="exp-desc">
+          Worked as a Full-Stack Software Developer on web application development, frontend implementation, debugging and database-related tasks.
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item fade-in">
+      <div class="exp-date">
         2024 — 2026<br>
         <span style="color:var(--accent);font-size:11px;">Current</span>
       </div>
       <div>
         <div class="exp-company">Mount Carmel College (Autonomous), Bengaluru</div>
         <div class="exp-role">Master of Computer Applications (MCA)</div>
-        <div class="exp-desc">
-          CGPA: 8.7. Studying advanced concepts in software development, database management systems, machine learning, cloud computing, and web technologies.
-        </div>
+        <div class="exp-desc">CGPA: 8.7</div>
       </div>
     </div>
 
@@ -1009,25 +1087,9 @@
         <span style="color:var(--muted);font-size:11px;">Completed</span>
       </div>
       <div>
-        <div class="exp-company">East Point College of Higher Education</div>
+        <div class="exp-company">East Point College of Higher Education, Bengaluru</div>
         <div class="exp-role">Bachelor of Computer Applications (BCA)</div>
-        <div class="exp-desc">
-          CGPA: 9.3. Built a strong foundation in programming, databases, software engineering, and web development.
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item fade-in">
-      <div class="exp-date">
-        May 2024 — June 2024<br>
-        <span style="color:var(--accent);font-size:11px;">Internship</span>
-      </div>
-      <div>
-        <div class="exp-company">Inventeron Technology</div>
-        <div class="exp-role">Trainee Software Engineer</div>
-        <div class="exp-desc">
-          Assisted in software development and debugging activities, worked with databases and programming concepts, and gained exposure to real-world software development workflows and team collaboration.
-        </div>
+        <div class="exp-desc">CGPA: 9.3</div>
       </div>
     </div>
 
@@ -1043,10 +1105,8 @@
       </h2>
 
       <p class="contact-sub">
-        I am actively seeking internships, graduate trainee opportunities,
-        and entry-level positions in Software Development, QA Testing,
-        Web Development, and related IT roles. Feel free to connect with
-        me regarding opportunities, collaborations, or professional networking.
+        I am actively seeking entry-level opportunities in front end development,
+        software development, QA testing, web development, and related IT roles.
       </p>
     </div>
 
@@ -1062,7 +1122,7 @@
         <span class="arrow">↗</span>
       </a>
 
-      <a href="https://linkedin.com/zayanahkhan" class="contact-link" target="_blank">
+      <a href="https://www.linkedin.com/in/zayanah-khan/" class="contact-link" target="_blank">
         <span>LinkedIn Profile</span>
         <span class="arrow">↗</span>
       </a>
@@ -1072,7 +1132,7 @@
         <span class="arrow">↗</span>
       </a>
 
-      <a href="resume_Zayanah.pdf" class="contact-link" target="_blank">
+      <a href="https://drive.google.com/file/d/1CBOMfsMCegTYtVZMuUNEkvcMemsjYh64/view?usp=sharing" class="contact-link" target="_blank">
         <span>Download Resume</span>
         <span class="arrow">↗</span>
       </a>
@@ -1084,7 +1144,7 @@
 <!-- FOOTER -->
 <footer>
   <span class="footer-text">© 2026 Zayanah Khan. All rights reserved.</span>
-  <span class="status-dot">Available for work</span>
+  <span class="status-dot">Open to Entry-Level Opportunities</span>
 </footer>
 
 <script>
